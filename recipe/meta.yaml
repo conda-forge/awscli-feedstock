@@ -13,7 +13,7 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -47,7 +47,11 @@ test:
 about:
   home: http://aws.amazon.com/cli/
   license: Apache 2.0
+  license_file: LICENSE.txt
+  license_family: Apache
   summary: 'Universal Command Line Environment for AWS.'
+  dev_url: https://github.com/aws/aws-cli
+  doc_url: http://aws.amazon.com/cli/
 
 extra:
   recipe-maintainers:
