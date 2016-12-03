@@ -1,7 +1,7 @@
 {%set name = "awscli" %}
-{%set version = "1.10.44" %}
+{%set version = "1.11.24" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "d34e23914867a4693c9545148540d00386b2cd2f2fc0b0e59f9f983665dd4065" %}
+{%set hash_val = "c3edb1e15b2b595d40691a716296b464c2cc2ef8cc39269a395e0dbf0f3fcc68" %}
 
 package:
   name: {{ name }}
@@ -23,11 +23,13 @@ requirements:
 
   run:
     - python
-    - botocore ==1.4.34
-    - colorama >=0.2.5,<=0.3.3
+    - botocore ==1.4.81
+    - colorama >=0.2.5,<=0.3.7
     - docutils >=0.10
     - rsa >=3.1.2,<=3.5.0
-    - s3transfer ==0.0.1
+    - s3transfer >=0.1.9,<0.2.0
+    - pyyaml >=3.10,<=3.12
+    - argparse >=1.1  # [py26]
 
 test:
   imports:
@@ -56,3 +58,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - hajapy
