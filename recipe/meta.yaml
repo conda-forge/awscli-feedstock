@@ -1,7 +1,7 @@
 {%set name = "awscli" %}
-{%set version = "1.11.44" %}
+{%set version = "1.11.63" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "eaea2e3c1a473462dc26ff0f8972c45b4a523a713eceaa52080c4672b69ac32f" %}
+{%set hash_val = "358434e313f742c9cb658aff15c57ce8d3c4b1e1034da71935671ec1d1c60ae5" %}
 
 package:
   name: {{ name }}
