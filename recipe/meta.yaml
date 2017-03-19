@@ -1,19 +1,21 @@
 {%set name = "awscli" %}
 {%set version = "1.11.63" %}
+{%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
 {%set hash_val = "358434e313f742c9cb658aff15c57ce8d3c4b1e1034da71935671ec1d1c60ae5" %}
+{%set build_num = "0" %}
 
 package:
-  name: {{ name }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  number: 1
+  number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -47,13 +49,13 @@ test:
     - awscli.customizations.s3.syncstrategy
 
 about:
-  home: http://aws.amazon.com/cli/
-  license: Apache 2.0
+  home: https://aws.amazon.com/cli/
   license_file: LICENSE.txt
+  license: Apache 2.0
   license_family: Apache
-  summary: 'Universal Command Line Environment for AWS.'
+  summary: Universal Command Line Environment for AWS.
   dev_url: https://github.com/aws/aws-cli
-  doc_url: http://aws.amazon.com/cli/
+  doc_url: https://aws.amazon.com/cli/
 
 extra:
   recipe-maintainers:
