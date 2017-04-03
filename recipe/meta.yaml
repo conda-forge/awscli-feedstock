@@ -1,8 +1,8 @@
 {%set name = "awscli" %}
-{%set version = "1.11.63" %}
+{%set version = "1.11.70" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "358434e313f742c9cb658aff15c57ce8d3c4b1e1034da71935671ec1d1c60ae5" %}
+{%set hash_val = "321d436e95f66b99bad642ecf8ce77e4e0ba4c29329a8f2ce611ac6c4ad1a7de" %}
 {%set build_num = "0" %}
 
 package:
