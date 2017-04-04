@@ -1,7 +1,7 @@
 About awscli
 ============
 
-Home: http://aws.amazon.com/cli/
+Home: https://aws.amazon.com/cli/
 
 Package license: Apache 2.0
 
