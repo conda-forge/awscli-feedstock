@@ -14,14 +14,16 @@ Summary: Universal Command Line Environment for AWS.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/awscli-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/awscli-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/awscli-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/awscli-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/awscli-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/awscli-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/awscli-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/awscli-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/awscli-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/awscli-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/awscli-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/awscli-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/awscli/badges/version.svg)](https://anaconda.org/conda-forge/awscli)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/awscli/badges/downloads.svg)](https://anaconda.org/conda-forge/awscli)
+[![Conda Recipe](https://img.shields.io/badge/recipe-awscli-green.svg)](https://anaconda.org/conda-forge/awscli)
+[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/awscli.svg)](https://anaconda.org/conda-forge/awscli)
+[![Conda Version](https://img.shields.io/conda/vn/conda-forge/awscli.svg)](https://anaconda.org/conda-forge/awscli)
+[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/awscli.svg)](https://anaconda.org/conda-forge/awscli)
 
 Installing awscli
 =================
