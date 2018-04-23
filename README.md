@@ -20,10 +20,10 @@ Current build status
 
 Current release info
 ====================
-[![Conda Recipe](https://img.shields.io/badge/recipe-awscli-green.svg)](https://anaconda.org/conda-forge/awscli)
-[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/awscli.svg)](https://anaconda.org/conda-forge/awscli)
-[![Conda Version](https://img.shields.io/conda/vn/conda-forge/awscli.svg)](https://anaconda.org/conda-forge/awscli)
-[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/awscli.svg)](https://anaconda.org/conda-forge/awscli)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-awscli-green.svg)](https://anaconda.org/conda-forge/awscli) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/awscli.svg)](https://anaconda.org/conda-forge/awscli) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/awscli.svg)](https://anaconda.org/conda-forge/awscli) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/awscli.svg)](https://anaconda.org/conda-forge/awscli) |
 
 Installing awscli
 =================
