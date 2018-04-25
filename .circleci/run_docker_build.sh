@@ -56,7 +56,7 @@ echo "$config" > ~/.condarc
 conda clean --lock
 
 # Make sure we pull in the latest conda-build version too
-conda install --yes --quiet conda-forge-ci-setup=1 conda-build
+conda install --yes --quiet conda-forge-ci-setup=1 conda-build=3.8
 source run_conda_forge_build_setup
 
 conda build /home/conda/recipe_root -m /home/conda/feedstock_root/.ci_support/${CONFIG}.yaml --quiet || exit 1

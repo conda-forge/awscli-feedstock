@@ -52,7 +52,7 @@ install:
       conda config --add channels defaults
       conda config --add channels conda-forge
       conda config --set show_channel_urls true
-      conda install --yes --quiet conda-forge-ci-setup=1
+      conda install --yes --quiet conda-forge-ci-setup=1 conda-build=3.8
       source run_conda_forge_build_setup
 
 script:
