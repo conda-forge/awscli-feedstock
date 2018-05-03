@@ -1,8 +1,8 @@
 {% set name = "awscli" %}
-{% set version = "1.15.11" %}
+{% set version = "1.15.12" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "76b9bf77c5e31fc27e094be17b38eda41402ad8677f724a2e958d587526a2a51" %}
+{% set hash = "004db394c15e1b04c33d24a057a92736d147c3224b8772c484e00ceb2fe6ec77" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -24,7 +24,7 @@ requirements:
 
   run:
     - python
-    - botocore ==1.10.11
+    - botocore ==1.10.12
     - colorama >=0.2.5,<=0.3.7
     - docutils >=0.10
     - rsa >=3.1.2,<=3.5.0
