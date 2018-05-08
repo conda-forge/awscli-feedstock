@@ -1,8 +1,8 @@
 {% set name = "awscli" %}
-{% set version = "1.15.14" %}
+{% set version = "1.15.15" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "84b0788681bcfbd7d2b23eede1b0cb17307fb55511adbed1358efc90fbe158eb" %}
+{% set hash = "eff8850d5cee43cf103a2291a1d84852d8dc07e82e794bbd89c4ac7917989688" %}
 
 package:
   name: {{ name|lower }}
@@ -10,21 +10,22 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
+  noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
-    - botocore ==1.10.14
+    - botocore ==1.10.15
     - colorama >=0.2.5,<=0.3.7
     - docutils >=0.10
     - rsa >=3.1.2,<=3.5.0
