@@ -14,8 +14,9 @@ Summary: Universal Command Line Environment for AWS.
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/awscli-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/awscli-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/awscli-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/awscli-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/awscli-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/awscli-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/awscli-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/awscli-feedstock/branch/master)
 
 Current release info
 ====================
