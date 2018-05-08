@@ -13,6 +13,7 @@ source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
+
 build:
   noarch: python
   number: 0
@@ -25,7 +26,7 @@ requirements:
 
   run:
     - python
-    - botocore ==1.10.15
+    - botocore ==1.10.16
     - colorama >=0.2.5,<=0.3.7
     - docutils >=0.10
     - rsa >=3.1.2,<=3.5.0
