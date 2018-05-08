@@ -13,9 +13,7 @@ source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
-
 build:
-  noarch: python
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
