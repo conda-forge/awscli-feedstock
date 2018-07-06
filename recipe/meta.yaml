@@ -1,8 +1,8 @@
 {% set name = "awscli" %}
-{% set version = "1.15.51" %}
+{% set version = "1.15.53" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "a59ea739cc0899928b88e356caa7883e0b25d8e13748355ac974424a2c9492ef" %}
+{% set hash = "91fe6aa585143db8a6ffcc68b7cf56e4993f7bc9a26172652979b390d2d20662" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +24,7 @@ requirements:
 
   run:
     - python
-    - botocore ==1.10.50
+    - botocore ==1.10.52
     - colorama >=0.2.5,<=0.3.9
     - docutils >=0.10
     - rsa >=3.1.2,<=3.5.0
