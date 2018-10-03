@@ -1,8 +1,8 @@
 {% set name = "awscli" %}
-{% set version = "1.16.25" %}
+{% set version = "1.16.26" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "926a9b7f000fb3087edd04ed835efed7a95c2bf63c75f05df4b9dfe918cd41ee" %}
+{% set hash = "2315b5c073916811fff6af0f09f8dd8aa0d5bf875320ce92492b078fe398e481" %}
 
 package:
   name: {{ name|lower }}
