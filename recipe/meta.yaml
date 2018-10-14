@@ -1,8 +1,8 @@
 {% set name = "awscli" %}
-{% set version = "1.16.30" %}
+{% set version = "1.16.33" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "37435c3e6c52d13f89a0fe397c26d4eb509199c708c1cc81e4f8077e436dad21" %}
+{% set hash = "97520d5252177d4667db6faa5594823bda4bd617994404748036ec2070967c18" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1000
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
