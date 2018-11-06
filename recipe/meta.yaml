@@ -4,6 +4,13 @@
 {% set hash_type = "sha256" %}
 {% set hash = "7bbe04d63ffd90558f07207a35075588114be543d8617dd8e8c8a8d047b1d3a9" %}
 
+{% set vmajor,vminor,vpatch = version.split('.') %}
+# ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
+{% set botocore_major = vmajor | int + 0 %}
+{% set botocore_minor = vminor | int - 4 %}
+{% set botocore_patch = vpatch | int - 10 %}
+{% set botocore_pin = botocore_major ~ '.' ~ botocore_minor ~ '.' ~ botocore_patch %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -14,7 +21,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1000
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -24,7 +31,7 @@ requirements:
 
   run:
     - python
-    - botocore ==1.12.20
+    - botocore =={{ botocore_pin }}
     - colorama >=0.2.5,<=0.3.9
     - docutils >=0.10
     - rsa >=3.1.2,<=3.5.0
