@@ -1,8 +1,8 @@
 {% set name = "awscli" %}
-{% set version = "1.16.98" %}
+{% set version = "1.16.99" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "d4aefd3b56eac28c09210718566c8d98352015c1d1fd7b758c80d5122d2a0d59" %}
+{% set hash = "a9dd44db98f70c449bdd2ba27098e9c8023bdfdf93bba1183294be52c6156a69" %}
 
 {% set vmajor,vminor,vpatch = version.split('.') %}
 # ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
@@ -35,7 +35,7 @@ requirements:
     - colorama >=0.2.5,<=0.3.9
     - docutils >=0.10
     - rsa >=3.1.2,<=3.5.0
-    - s3transfer >=0.1.12,<0.2.0
+    - s3transfer >=0.2.0,<0.3.0
     - pyyaml >=3.10,<=3.13
 
 test:
