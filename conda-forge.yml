@@ -9,3 +9,5 @@ provider:
   linux: azure
   osx: azure
   win: azure
+  linux_ppc64le: default
+  linux_aarch64: default
