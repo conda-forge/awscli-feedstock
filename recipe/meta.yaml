@@ -36,7 +36,7 @@ requirements:
     - docutils >=0.10
     - rsa >=3.1.2,<=3.5.0
     - s3transfer >=0.2.0,<0.3.0
-    - pyyaml >=3.10,<=3.13
+    - pyyaml >=3.10,<=5.1
 
 test:
   imports:
