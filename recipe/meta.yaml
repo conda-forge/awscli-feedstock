@@ -7,8 +7,8 @@
 {% set vmajor,vminor,vpatch = version.split('.') %}
 # ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
 {% set botocore_major = vmajor | int + 0 %}
-{% set botocore_minor = vminor | int - 4 %}
-{% set botocore_patch = vpatch | int - 10 %}
+{% set botocore_minor = vminor | int - 3 %}
+{% set botocore_patch = vpatch | int - 264 %}
 {% set botocore_pin = botocore_major ~ '.' ~ botocore_minor ~ '.' ~ botocore_patch %}
 
 package:
