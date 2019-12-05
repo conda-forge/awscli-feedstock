@@ -1,8 +1,8 @@
 {% set name = "awscli" %}
-{% set version = "1.16.296" %}
+{% set version = "1.16.297" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "e0a98c0b89fc372d0356f6291c0c4e55f2e0df7056df3575d639ff3985c7248d" %}
+{% set hash = "5d94d0e8e762dc393b9c197a419d3f2b9f1f6103266f2d7f01893577bda64d2a" %}
 
 {% set vmajor,vminor,vpatch = version.split('.') %}
 # ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
