@@ -1,8 +1,8 @@
 {% set name = "awscli" %}
-{% set version = "1.16.138" %}
+{% set version = "1.16.308" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "e36ba2d497c129f56561c6b224fc7b98e2f4fbd7b6784fe179247d0ae04598e9" %}
+{% set hash = "3632fb1db2538128509a7b5e89f2a2c4ea3426bec139944247bddc4d79bf7603" %}
 
 {% set vmajor,vminor,vpatch = version.split('.') %}
 # ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
@@ -36,7 +36,7 @@ requirements:
     - docutils >=0.10
     - rsa >=3.1.2,<=3.5.0
     - s3transfer >=0.2.0,<0.3.0
-    - pyyaml >=3.10,<=3.13
+    - pyyaml >=3.10,<5.3
 
 test:
   imports:
