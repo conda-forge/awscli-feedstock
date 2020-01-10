@@ -8,7 +8,7 @@
 # ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
 {% set botocore_major = vmajor | int + 0 %}
 {% set botocore_minor = vminor | int - 3 %}
-{% set botocore_patch = vpatch | int - 264 %}
+{% set botocore_patch = vpatch | int + 0 %}
 {% set botocore_pin = botocore_major ~ '.' ~ botocore_minor ~ '.' ~ botocore_patch %}
 
 package:
@@ -35,7 +35,7 @@ requirements:
     - colorama >=0.2.5,<0.4.2
     - docutils >=0.10,<0.16
     - rsa >=3.1.2,<=3.5.0
-    - s3transfer >=0.2.0,<0.3.0
+    - s3transfer >=0.3.0,<0.4.0
     - pyyaml >=3.10,<5.3
 
 test:
