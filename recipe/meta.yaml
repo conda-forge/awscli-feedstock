@@ -1,8 +1,8 @@
 {% set name = "awscli" %}
-{% set version = "1.17.11" %}
+{% set version = "1.17.12" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "e5617cb8244863566df1cb12564e439b224e88ea2270f27b28da82df093eba0a" %}
+{% set hash = "1783cf6c082f2199357661e812a618e4431631a12a3466dd620b580a35bcdec4" %}
 
 {% set vmajor,vminor,vpatch = version.split('.') %}
 # ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
@@ -32,7 +32,7 @@ requirements:
   run:
     - python
     - botocore =={{ botocore_pin }}
-    - colorama >=0.2.5,<0.4.2
+    - colorama >=0.2.5,<0.4.4
     - docutils >=0.10,<0.16
     - rsa >=3.1.2,<=3.5.0
     - s3transfer >=0.3.0,<0.4.0
