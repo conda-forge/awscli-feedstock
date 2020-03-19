@@ -54,7 +54,7 @@ test:
 about:
   home: https://aws.amazon.com/cli/
   license_file: LICENSE.txt
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   summary: Universal Command Line Environment for AWS.
   dev_url: https://github.com/aws/aws-cli
