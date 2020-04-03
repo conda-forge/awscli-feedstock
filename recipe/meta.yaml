@@ -19,7 +19,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
