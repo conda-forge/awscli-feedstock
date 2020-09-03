@@ -1,6 +1,6 @@
 {% set name = "awscli" %}
-{% set version = "1.18.131" %}
-{% set hash = "5dfdae33fc7c7b24c4beeaf8db7ca5ddec903d8b249578d1d0d4bd86c128d53d" %}
+{% set version = "1.18.132" %}
+{% set hash = "f817110be7f62077919b766ccc96721fe225780b8b3414bfd6e4d859fe643473" %}
 
 {% set vmajor,vminor,vpatch = version.split('.') %}
 # ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
