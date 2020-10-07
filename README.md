@@ -5,11 +5,13 @@ Home: https://aws.amazon.com/cli/
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/awscli-feedstock/blob/master/LICENSE.txt)
 
 Summary: Universal Command Line Environment for AWS.
 
+Development: https://github.com/aws/aws-cli
 
+Documentation: https://aws.amazon.com/cli/
 
 Current build status
 ====================
