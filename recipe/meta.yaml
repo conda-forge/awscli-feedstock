@@ -1,12 +1,12 @@
 {% set name = "awscli" %}
-{% set version = "1.18.223" %}
-{% set hash = "33273a893d3854ed839620a262f9f826dba82d505660da7c11b138822626aed9" %}
+{% set version = "1.19.0" %}
+{% set hash = "2bdc2ef330f9334dbeefb91c942061feb6a53646bd55c663e0056f8d0dc66fed" %}
 
 {% set vmajor,vminor,vpatch = version.split('.') %}
 # ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
 {% set botocore_major = vmajor | int + 0 %}
 {% set botocore_minor = vminor | int + 1 %}
-{% set botocore_patch = vpatch | int - 160 %}
+{% set botocore_patch = vpatch | int + 0 %}
 {% set botocore_pin = botocore_major ~ '.' ~ botocore_minor ~ '.' ~ botocore_patch %}
 
 package:
