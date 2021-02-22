@@ -32,7 +32,8 @@ requirements:
     - botocore =={{ botocore_pin }}
     - colorama >=0.2.5,<0.4.4
     - docutils >=0.10,<0.16
-    - rsa >=3.1.2,<=4.5.0
+    - rsa >=3.1.2,<=4.5.0  # [py2k]
+    - rsa >=3.1.2,<4.8  # [py3k]
     - s3transfer >=0.3.0,<0.4.0
     - pyyaml >=3.10,<5.5
 
