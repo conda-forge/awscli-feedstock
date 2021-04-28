@@ -314,6 +314,5 @@ Feedstock Maintainers
 =====================
 
 * [@hajapy](https://github.com/hajapy/)
-* [@pmlandwehr](https://github.com/pmlandwehr/)
 * [@tkelman](https://github.com/tkelman/)
 
