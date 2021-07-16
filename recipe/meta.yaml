@@ -24,11 +24,13 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python
+#    - python >=3.6
     - pip
 
   run:
-    - python >=3.6
+    - python
+#    - python >=3.6
     - botocore =={{ botocore_pin }}
     - colorama >=0.2.5,<0.4.4
     - docutils >=0.10,<0.16
