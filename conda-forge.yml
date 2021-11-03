@@ -6,3 +6,5 @@ provider:
   linux: azure
   osx: azure
   win: azure
+build_platform:
+  linux_aarch64: linux_64
