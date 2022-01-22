@@ -5,7 +5,7 @@
 {% set vmajor,vminor,vpatch = version.split('.') %}
 # ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
 {% set botocore_major = vmajor | int + 0 %}
-{% set botocore_minor = vminor | int - 3 %}
+{% set botocore_minor = vminor | int + 1 %}
 {% set botocore_patch = vpatch | int + 0 %}
 {% set botocore_pin = botocore_major ~ '.' ~ botocore_minor ~ '.' ~ botocore_patch %}
 
@@ -24,17 +24,22 @@ build:
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+  host:
     - python
+#    - python >=3.6
     - pip
 
   run:
     - python
+#    - python >=3.6
     - botocore =={{ botocore_pin }}
     - colorama >=0.2.5,<0.4.4
     - docutils >=0.10,<0.16
-    - rsa >=3.1.2,<=3.5.0
-    - s3transfer >=0.3.0,<0.4.0
-    - pyyaml >=3.10,<5.3
+    - rsa >=3.1.2,<4.8
+    - s3transfer >=0.5.0,<0.6.0
+    - pyyaml >=3.10,<5.5
 
 test:
   imports:
@@ -54,7 +59,7 @@ test:
 about:
   home: https://aws.amazon.com/cli/
   license_file: LICENSE.txt
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   summary: Universal Command Line Environment for AWS.
   dev_url: https://github.com/aws/aws-cli
@@ -62,6 +67,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - pmlandwehr
     - hajapy
     - tkelman
