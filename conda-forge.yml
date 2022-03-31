@@ -3,7 +3,7 @@ build_platform:
 conda_forge_output_validation: true
 provider:
   linux: azure
-  linux_aarch64: default
+  linux_aarch64: azure
   linux_ppc64le: azure
   osx: azure
   win: azure
