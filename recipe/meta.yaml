@@ -19,8 +19,9 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv  # [not unix]
+  script: {{ PYTHON }} -m pip install . --no-deps -vv && mkdir -p $PREFIX/share/bash-completions/completions && echo complete -C aws_completer aws >$PREFIX/share/bash-completions/completions/aws  # [unix]
 
 requirements:
   build:
@@ -55,6 +56,9 @@ test:
     - awscli.customizations.gamelift
     - awscli.customizations.s3
     - awscli.customizations.s3.syncstrategy
+  commands:
+    - test -f $PREFIX/bin/aws_completer                   # [unix]
+    - COMP_LINE="aws ec2 describe-inst" aws_completer     # [unix]
 
 about:
   home: https://aws.amazon.com/cli/
