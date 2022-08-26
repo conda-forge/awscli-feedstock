@@ -6,7 +6,7 @@
 # ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
 {% set botocore_major = vmajor | int + 0 %}
 {% set botocore_minor = vminor | int + 2 %}
-{% set botocore_patch = vpatch | int + 0 %}
+{% set botocore_patch = vpatch | int - 1 %}
 {% set botocore_pin = botocore_major ~ '.' ~ botocore_minor ~ '.' ~ botocore_patch %}
 
 package:
