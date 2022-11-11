@@ -19,7 +19,7 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
+    - python >=3.8                           # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python >=3.8
@@ -47,6 +47,7 @@ requirements:
     - urllib3>=1.25.4,<1.27
 
   run:
+    - python >=3.8
     # Commented lines are the original requirements from
     # https://github.com/aws/aws-cli/blob/2.8.11/pyproject.toml#L30-L40
     # They have been expanded to work with the available conda-forge packages on
