@@ -42,9 +42,9 @@ requirements:
     - prompt_toolkit >=3.0.24,<3.0.29
     - distro >=1.5.0,<1.6.0
     - awscrt >=0.12.4,<=0.14.0
-    - python-dateutil>=2.1,<3.0.0
-    - jmespath>=0.7.1,<1.1.0
-    - urllib3>=1.25.4,<1.27
+    - python-dateutil >=2.1,<3.0.0
+    - jmespath >=0.7.1,<1.1.0
+    - urllib3 >=1.25.4,<1.27
 
   run:
     - python >=3.8
@@ -62,9 +62,9 @@ requirements:
     - prompt_toolkit >=3.0.24,<3.0.29
     - distro >=1.5.0,<1.6.0
     - awscrt >=0.12.4,<=0.14.0
-    - python-dateutil>=2.1,<3.0.0
-    - jmespath>=0.7.1,<1.1.0
-    - urllib3>=1.25.4,<1.27
+    - python-dateutil >=2.1,<3.0.0
+    - jmespath >=0.7.1,<1.1.0
+    - urllib3 >=1.25.4,<1.27
 
 test:
   commands:
