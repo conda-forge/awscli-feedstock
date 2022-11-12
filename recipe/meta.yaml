@@ -12,10 +12,10 @@ source:
 
 build:
   number: 0
-  noarch: python
   # Build uses pep517 with a custom backend
-  script: |
-    {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+  # console_scripts entrypoints aren't used, so this can't be noarch
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv  # [not unix]
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv && mkdir -p $PREFIX/share/bash-completions/completions && echo complete -C aws_completer aws >$PREFIX/share/bash-completions/completions/aws  # [unix]
 
 requirements:
   build:
@@ -30,12 +30,10 @@ requirements:
     # which requires importing awscli modules, so we need to install all runtime
     # dependencies too. YAML anchors don't support merging lists so we have to
     # duplicate everything :-(
-    # Commented lines are the original requirements from
+    # Requirements taken from
     # https://github.com/aws/aws-cli/blob/2.8.11/pyproject.toml#L30-L40
-    # - colorama >=0.2.5,<0.4.4
-    - colorama >=0.2.5,<0.5.0
-    # - docutils >=0.10,<0.16
-    - docutils >=0.10,<0.18
+    - colorama >=0.2.5,<0.4.4
+    - docutils >=0.10,<0.16
     - cryptography >=3.3.2,<=38.0.1
     - ruamel.yaml >=0.15.0,<=0.17.21
     - wcwidth <0.2.0
@@ -48,14 +46,8 @@ requirements:
 
   run:
     - python >=3.8
-    # Commented lines are the original requirements from
-    # https://github.com/aws/aws-cli/blob/2.8.11/pyproject.toml#L30-L40
-    # They have been expanded to work with the available conda-forge packages on
-    # more recent versions of Python
-    # - colorama >=0.2.5,<0.4.4
-    - colorama >=0.2.5,<0.5.0
-    # - docutils >=0.10,<0.16
-    - docutils >=0.10,<0.18
+    - colorama >=0.2.5,<0.4.4
+    - docutils >=0.10,<0.16
     - cryptography >=3.3.2,<=38.0.1
     - ruamel.yaml >=0.15.0,<=0.17.21
     - wcwidth <0.2.0
@@ -67,12 +59,6 @@ requirements:
     - urllib3 >=1.25.4,<1.27
 
 test:
-  commands:
-    - aws --version
-    - aws_completer
-    # Check autocomplete index exists:
-    - python -c 'import awscli, os; assert os.stat(os.path.join(os.path.dirname(awscli.__file__), "data", "ac.index")).st_size > 1e6'
-    - COMP_LINE="aws ec2 describe-inst" aws_completer     # [unix]
   imports:
     # find $CONDA_PREFIX/lib/python3.9/site-packages/awscli/ -type f -name __init__.py | sed -re 's%.+(awscli.*)/__init__.py%- \1%' -re s'%/%.%g' | sort
     # Last updated version 2.8.11
@@ -120,6 +106,13 @@ test:
     - awscli.customizations.wizard
     - awscli.customizations.wizard.ui
     - awscli.s3transfer
+
+  commands:
+    - aws --version
+    - aws_completer
+    # Check autocomplete index exists:
+    - python -c "import awscli, os; assert os.stat(os.path.join(os.path.dirname(awscli.__file__), 'data', 'ac.index')).st_size > 1e6"
+    - COMP_LINE="aws ec2 describe-inst" aws_completer     # [unix]
 
 about:
   home: https://aws.amazon.com/cli/
