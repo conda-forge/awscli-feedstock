@@ -17,7 +17,6 @@ build:
   # console_scripts entrypoints aren't used, so this can't be noarch
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv  # [not unix]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv && mkdir -p $PREFIX/share/bash-completions/completions && echo complete -C aws_completer aws >$PREFIX/share/bash-completions/completions/aws  # [unix]
-  skip: true  # [py<38]
 
 requirements:
   build:
