@@ -2,13 +2,6 @@
 {% set version = "1.27.42" %}
 {% set hash = "2ae35a75e6e42cbc29d26778384079a645ef159945e70ace984de00a032c8dc4" %}
 
-{% set vmajor,vminor,vpatch = version.split('.') %}
-# ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
-{% set botocore_major = vmajor | int + 0 %}
-{% set botocore_minor = vminor | int + 2 %}
-{% set botocore_patch = vpatch | int + 0 %}
-{% set botocore_pin = botocore_major ~ '.' ~ botocore_minor ~ '.' ~ botocore_patch %}
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
