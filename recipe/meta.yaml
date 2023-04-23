@@ -1,6 +1,6 @@
 {% set name = "awscli" %}
-{% set version = "2.8.12" %}
-{% set hash = "a1f16a8e0bb7fb098967f852b074f431ec4adbdfa51e714129945c67a9798537" %}
+{% set version = "2.11.15" %}
+{% set hash = "b7762178eee6c3753cb176badbccb4bb02662ae81fec499e507faf936f9fd320" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +24,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
-    - flit-core
+    - flit-core >=3.7.1,<3.8.1
     - pip
 
     # The build process generates the autocomplete index (scripts/gen-ac-index)
@@ -32,29 +32,29 @@ requirements:
     # dependencies too. YAML anchors don't support merging lists so we have to
     # duplicate everything :-(
     # Requirements taken from
-    # https://github.com/aws/aws-cli/blob/2.8.11/pyproject.toml#L30-L40
-    - colorama >=0.2.5,<0.4.4
-    - docutils >=0.10,<0.16
-    - cryptography >=3.3.2,<=38.0.1
+    # https://github.com/aws/aws-cli/blob/2.11.15/pyproject.toml#L30-L46
+    - colorama >=0.2.5,<0.4.7
+    - docutils >=0.10,<0.20
+    - cryptography >=3.3.2,<=40.0.2
     - ruamel.yaml >=0.15.0,<=0.17.21
-    - wcwidth <0.2.0
-    - prompt_toolkit >=3.0.24,<3.0.29
-    - distro >=1.5.0,<1.6.0
-    - awscrt >=0.12.4,<=0.14.0
+    - ruamel.yaml.clib >=0.2.0,<=0.2.7
+    - prompt_toolkit >=3.0.24,<3.0.39
+    - distro >=1.5.0,<1.9.0
+    - awscrt >=0.12.4,<=0.17.0
     - python-dateutil >=2.1,<3.0.0
     - jmespath >=0.7.1,<1.1.0
     - urllib3 >=1.25.4,<1.27
 
   run:
     - python
-    - colorama >=0.2.5,<0.4.4
-    - docutils >=0.10,<0.16
-    - cryptography >=3.3.2,<=38.0.1
+    - colorama >=0.2.5,<0.4.7
+    - docutils >=0.10,<0.20
+    - cryptography >=3.3.2,<=40.0.2
     - ruamel.yaml >=0.15.0,<=0.17.21
-    - wcwidth <0.2.0
-    - prompt_toolkit >=3.0.24,<3.0.29
-    - distro >=1.5.0,<1.6.0
-    - awscrt >=0.12.4,<=0.14.0
+    - ruamel.yaml.clib >=0.2.0,<=0.2.7
+    - prompt_toolkit >=3.0.24,<3.0.39
+    - distro >=1.5.0,<1.9.0
+    - awscrt >=0.12.4,<=0.17.0
     - python-dateutil >=2.1,<3.0.0
     - jmespath >=0.7.1,<1.1.0
     - urllib3 >=1.25.4,<1.27
@@ -62,7 +62,7 @@ requirements:
 test:
   imports:
     # find $CONDA_PREFIX/lib/python3.9/site-packages/awscli/ -type f -name __init__.py | sed -re 's%.+(awscli.*)/__init__.py%- \1%' -re s'%/%.%g' | sort
-    # Last updated version 2.8.11
+    # Last updated version 2.11.15
     - awscli
     - awscli.autocomplete
     - awscli.autocomplete.local
