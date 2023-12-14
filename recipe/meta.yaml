@@ -22,12 +22,12 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
-#    - python >=3.7
+#    - python >=3.8
     - pip
 
   run:
     - python
-#    - python >=3.7
+#    - python >=3.8
     - botocore ==1.34.0
     - colorama >=0.2.5,<0.4.5
     - docutils >=0.10,<0.17
