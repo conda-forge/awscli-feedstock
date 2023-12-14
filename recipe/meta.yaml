@@ -1,6 +1,6 @@
 {% set name = "awscli" %}
-{% set version = "1.31.13" %}
-{% set hash = "c14e73aac42c763292e77241387e8f8daca4e83cbe93cb807caed506a442aad8" %}
+{% set version = "1.32.0" %}
+{% set hash = "9919df76d2ec145e6c71c0385984172805b25a1238161c8d7853fb49c7c741bd" %}
 
 package:
   name: {{ name|lower }}
@@ -22,17 +22,17 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
-#    - python >=3.7
+#    - python >=3.8
     - pip
 
   run:
     - python
-#    - python >=3.7
-    - botocore ==1.33.13
+#    - python >=3.8
+    - botocore ==1.34.0
     - colorama >=0.2.5,<0.4.5
     - docutils >=0.10,<0.17
     - rsa >=3.1.2,<4.8
-    - s3transfer >=0.8.0,<0.9.0
+    - s3transfer >=0.9.0,<0.10.0
     - pyyaml >=3.10,<6.1
 
 test:
