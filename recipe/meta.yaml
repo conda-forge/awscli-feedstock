@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv  # [not unix]
   script: {{ PYTHON }} -m pip install . --no-deps -vv && mkdir -p $PREFIX/share/bash-completions/completions && echo complete -C aws_completer aws >$PREFIX/share/bash-completions/completions/aws  # [unix]
 
