@@ -1,6 +1,6 @@
 {% set name = "awscli" %}
-{% set version = "1.35.0" %}
-{% set hash = "904a833e7e1d787f27f580b93d089564a820c7c290e952c90bc6acdceb79cb66" %}
+{% set version = "1.35.1" %}
+{% set hash = "02b50e4f2ed24dfcd2af353dcde252a37dd765bf2ac3ac87a340203e97728e80" %}
 
 package:
   name: {{ name|lower }}
@@ -28,7 +28,7 @@ requirements:
   run:
     - python
 #    - python >=3.8
-    - botocore ==1.35.34
+    - botocore ==1.35.35
     - colorama >=0.2.5,<0.4.7
     - docutils >=0.10,<0.17
     - rsa >=3.1.2,<4.8
