@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv  # [not unix]
   script: {{ PYTHON }} -m pip install . --no-deps -vv && mkdir -p $PREFIX/share/bash-completions/completions && echo complete -C aws_completer aws >$PREFIX/share/bash-completions/completions/aws  # [unix]
 
@@ -31,7 +31,7 @@ requirements:
 #    - python >=3.8
     - botocore ==1.35.44
     - colorama >=0.2.5,<0.4.7
-    - docutils >=0.10,<0.17
+    - docutils >=0.10,<0.20
     - rsa >=3.1.2,<4.8
     - s3transfer >=0.10.0,<0.11.0
     - pyyaml >=3.10,<6.1
