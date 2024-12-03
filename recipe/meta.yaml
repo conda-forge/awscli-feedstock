@@ -13,9 +13,9 @@ source:
 
 build:
   number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-#  script: {{ PYTHON }} -m pip install . --no-deps -vv  # [not unix]
-#  script: {{ PYTHON }} -m pip install . --no-deps -vv && mkdir -p $PREFIX/share/bash-completions/completions && echo complete -C aws_completer aws >$PREFIX/share/bash-completions/completions/aws  # [unix]
+  script: |
+    {{ PYTHON }} -m pip install . --no-deps -vv  # [not unix]
+    {{ PYTHON }} -m pip install . --no-deps -vv && mkdir -p $PREFIX/share/bash-completions/completions && echo complete -C aws_completer aws >$PREFIX/share/bash-completions/completions/aws  # [unix]
 
 requirements:
   build:
