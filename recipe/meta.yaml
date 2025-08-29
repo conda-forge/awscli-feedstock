@@ -1,18 +1,17 @@
-{% set name = "awscli" %}
 {% set version = "1.42.20" %}
 {% set hash = "18780058be044da9b2cbd69abf3a32219bc671695ad000bbba61f71dd1f411ce" %}
 
 package:
-  name: {{ name|lower }}
+  name: awscli
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://files.pythonhosted.org/packages/57/63/3ab6b889fa2b83cbacd6ffe031e74c606490877d10c9611d0145befdbca1/awscli-{{ version }}.tar.gz
+  fn: awscli-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/a/awscli/awscli-{{ version }}.tar.gz
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . --no-deps -vv
     - mkdir -p $PREFIX/share/bash-completions/completions && echo complete -C aws_completer aws >$PREFIX/share/bash-completions/completions/aws  # [unix]
