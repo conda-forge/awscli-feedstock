@@ -1,6 +1,6 @@
 {% set name = "awscli" %}
-{% set version = "1.42.19" %}
-{% set hash = "192fa8bfc890d6e4a1c199741f5cbe0b577f2965fffd8dc183ae9ce1e33ebd47" %}
+{% set version = "1.42.20" %}
+{% set hash = "18780058be044da9b2cbd69abf3a32219bc671695ad000bbba61f71dd1f411ce" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/57/63/3ab6b889fa2b83cbacd6ffe031e74c606490877d10c9611d0145befdbca1/awscli-{{ version }}.tar.gz
   sha256: {{ hash }}
 
 build:
@@ -30,7 +30,7 @@ requirements:
   run:
     - python
     #- python >=3.9
-    - botocore ==1.40.19
+    - botocore ==1.40.20
     - colorama >=0.2.5,<0.4.7
     - docutils >=0.18.1,<=0.19
     - rsa >=3.1.2,<4.8
