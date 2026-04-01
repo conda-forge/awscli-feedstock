@@ -7,11 +7,11 @@ package:
 
 source:
   fn: awscli-{{ version }}.tar.gz
-  url: https://files.pythonhosted.org/packages/76/b2/0f522e76ca173ac06949883f00994ec173f9336c8f8146f982458ebc6ce7/awscli-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/a/awscli/awscli-{{ version }}.tar.gz
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} -m pip install . --no-deps -vv
     - mkdir -p $PREFIX/share/bash-completions/completions && echo complete -C aws_completer aws >$PREFIX/share/bash-completions/completions/aws  # [unix]
