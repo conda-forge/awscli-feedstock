@@ -1,5 +1,5 @@
-{% set version = "1.44.70" %}
-{% set hash = "25eafa6237a2ff9ad98c8bb486c40f904996db5fb3e9facc8cba9108caa7859c" %}
+{% set version = "1.44.71" %}
+{% set hash = "d7552f55b90096dbd49e1d1126e893cf6eeee8b0be42e70b937bb8354121da6c" %}
 
 package:
   name: awscli
@@ -11,7 +11,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   script:
     - {{ PYTHON }} -m pip install . --no-deps -vv
     - mkdir -p $PREFIX/share/bash-completions/completions && echo complete -C aws_completer aws >$PREFIX/share/bash-completions/completions/aws  # [unix]
@@ -29,7 +29,7 @@ requirements:
   run:
     - python
     #- python >=3.9
-    - botocore ==1.42.80
+    - botocore ==1.42.81
     - colorama >=0.2.5,<0.4.7
     - docutils >=0.18.1,<=0.19
     - rsa >=3.1.2,<4.8
