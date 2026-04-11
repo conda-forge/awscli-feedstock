@@ -7,7 +7,7 @@ package:
 
 source:
   fn: awscli-{{ version }}.tar.gz
-  url: https://files.pythonhosted.org/packages/58/a1/c74945f1a2aaf37155d0248cbb19be26391cf64c70dc90f8c01507e6479d/awscli-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/a/awscli/awscli-{{ version }}.tar.gz
   sha256: {{ hash }}
 
 build:
