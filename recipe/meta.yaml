@@ -1,5 +1,12 @@
-{% set version = "1.45.0" %}
-{% set hash = "8ae7d3d9cecd9cb3d881fd2696fb7d8a1e397bc68ed8e9fa8e0a82290a32443f" %}
+{% set version = "1.45.1" %}
+{% set hash = "44354a4366a7a1799afa500b1ba4a01ef92205263a7145f3cd2c0810ee6a6462" %}
+
+{% set vmajor,vminor,vpatch = version.split('.') %}
+# ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
+{% set botocore_major = vmajor | int + 0 %}
+{% set botocore_minor = vminor | int - 2 %}
+{% set botocore_patch = vpatch | int + 0 %}
+{% set botocore_pin = botocore_major ~ '.' ~ botocore_minor ~ '.' ~ botocore_patch %}
 
 package:
   name: awscli
@@ -22,14 +29,14 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
-    #- python >=3.9
+    #- python >=3.10
     - pip
     - setuptools
 
   run:
     - python
-    #- python >=3.9
-    - botocore ==1.43.0
+    #- python >=3.10
+    - botocore =={{ botocore_pin }}
     - colorama >=0.2.5,<0.4.7
     - docutils >=0.18.1,<=0.19
     - rsa >=3.1.2,<4.8
