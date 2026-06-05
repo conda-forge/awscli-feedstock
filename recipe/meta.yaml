@@ -1,5 +1,5 @@
-{% set version = "1.45.22" %}
-{% set hash = "b011c0f9df70f74b465e42e463f91d8eeb769da4774599b9f4462a25591a46fc" %}
+{% set version = "1.45.23" %}
+{% set hash = "daa087b64af7596fe3dd13fcb27e920a7bcccd77599fcaf0ece09d43e859971b" %}
 
 {% set vmajor,vminor,vpatch = version.split('.') %}
 # ALWAYS DOUBLE-CHECK THESE OFFSETS AGAINST UPSTREAM setup.py
@@ -36,7 +36,7 @@ requirements:
   run:
     - python
     #- python >=3.10
-    - botocore ==1.43.22
+    - botocore ==1.43.23
     - colorama >=0.2.5,<0.4.7
     - docutils >=0.18.1,<=0.19
     - rsa >=3.1.2,<4.8
