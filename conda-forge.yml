@@ -1,5 +1,7 @@
 bot:
   inspection: update-grayskull
+build_platform:
+  win_arm64: win_arm64
 conda_build:
   pkg_format: '2'
 conda_forge_output_validation: true
@@ -11,6 +13,7 @@ provider:
   linux_aarch64: azure
   linux_ppc64le: azure
   osx: azure
-  win: azure
   osx_arm64: default
+  win: azure
+  win_arm64: default
 test: native_and_emulated
