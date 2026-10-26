@@ -1,3 +1,5 @@
+DOCKER_PLATFORM:
+- linux/ppc64le
 channel_sources:
 - conda-forge
 channel_targets:
